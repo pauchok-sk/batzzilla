@@ -1,0 +1,30 @@
+.slider-pagination {
+  @include flex-center;
+  gap: 10px;
+  color: var(--black);
+  margin-top: 30px;
+
+  &._white {
+    color: white;
+  }
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    margin: 0 !important;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    background-color: currentColor;
+    opacity: 0.5;
+
+    transition: opacity .3s ease;
+
+    @include hover {
+      opacity: 1;
+    }
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}

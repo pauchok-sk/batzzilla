@@ -1,0 +1,18 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.body {
+  font-family: "Onest", sans-serif;
+  color: var(--black);
+}
+
+.sect-m {
+  margin: 90px 0px;
+  @include laptop-min {
+    margin: 70px 0px;
+  }
+  @include tablet {
+    margin: 50px 0px;
+  }
+}

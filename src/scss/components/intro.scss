@@ -1,0 +1,125 @@
+.intro {
+  position: relative;
+  &__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__slider-arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+
+    opacity: 0.3;
+
+    transition: opacity 0.3s ease;
+    z-index: 20;
+
+    @include hover {
+      opacity: 1;
+    }
+    @include laptop-min {
+      display: none;
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &._prev {
+      left: calc((100vw - 1820px) / 2);
+      @media (max-width: 1819px) {
+        left: 15px;
+      }
+    }
+    &._next {
+      right: calc((100vw - 1820px) / 2);
+      @media (max-width: 1819px) {
+        right: 15px;
+      }
+    }
+  }
+  &__slide {
+    position: relative;
+    display: flex !important;
+    align-items: flex-end;
+    padding: 80px 0px;
+    min-height: 820px;
+    box-sizing: border-box;
+    color: white;
+    z-index: 1;
+
+    @include desktop {
+      min-height: 700px;
+      padding: 55px 0px;
+    }
+    @include laptop-min {
+      min-height: 500px;
+      padding: 30px 0px 40px 0px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      z-index: -1;
+    }
+  }
+  &__slide-title {
+    font-weight: 400;
+    font-size: 60px;
+    margin: 0px 0px 15px 0px;
+    text-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+
+    @include laptop {
+      font-size: 48px;
+    }
+    @include laptop-min {
+      font-size: 42px;
+    }
+    @include tablet {
+      font-size: 38px;
+    }
+    @include tablet-min {
+      font-size: 28px;
+    }
+  }
+  &__slide-content {
+    font-size: 24px;
+    text-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    margin: 0px 0px 30px 0px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  &__slider-pagination {
+    position: absolute;
+    left: 0 !important;
+    right: 0;
+    bottom: 15px !important;
+    z-index: 10;
+    @media (min-width: 992px) {
+      display: none !important;
+    }
+  }
+}

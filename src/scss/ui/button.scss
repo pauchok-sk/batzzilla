@@ -1,0 +1,83 @@
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn-s {
+  @include flex-center;
+  gap: 10px;
+  padding: 19px 23px;
+  border-radius: 4px;
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  width: fit-content;
+
+  font-size: 20px;
+  color: white;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include hover {
+    border-color: var(--black-l);
+    background-color: var(--black-l);
+  }
+  @include tablet {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  &._outline-white {
+    color: white;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.5);
+
+    @include hover {
+      border-color: white;
+      background-color: white;
+      color: var(--black);
+    }
+  }
+
+  svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.btn-a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+
+  font-weight: 300;
+  font-size: 18px;
+
+  transition: color .3s ease;
+
+  @include hover {
+    color: var(--primary);
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+
+  svg {
+    width: 11px;
+    height: 11px;
+    color: var(--primary);
+
+    transition: transform .3s ease;
+  }
+}

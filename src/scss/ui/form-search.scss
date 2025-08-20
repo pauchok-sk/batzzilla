@@ -1,0 +1,42 @@
+.form-search {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 1px solid var(--nobel);
+  &__btn {
+    cursor: pointer;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border: none;
+    outline: none;
+    padding: 0;
+    
+    transition: color .3s ease;
+    
+    @include hover {
+      color: var(--primary);
+    }
+    
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  input {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding-bottom: 14px;
+
+    font-weight: 300;
+    font-size: 18px;
+
+    &::placeholder {
+      color: var(--nobel);
+    }
+  }
+}

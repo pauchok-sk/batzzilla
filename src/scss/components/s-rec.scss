@@ -1,0 +1,32 @@
+.s-rec {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__btn-next {
+    margin: 0 auto;
+  }
+  &__slider {
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 30px;
+      overflow: visible !important;
+    }
+  }
+  &__grid {
+    @include tablet {
+      display: flex !important;
+      gap: 0;
+    }
+
+    .swiper-slide {
+      @include tablet {
+        width: 300px !important;
+      }
+    }
+  }
+  &__slider-pagination {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
