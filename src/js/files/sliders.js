@@ -25,9 +25,30 @@ export default function sliders() {
       speed: 800,
       slidesPerView: "auto",
       spaceBetween: 20,
-      // autoplay: {
-      //   delay: 3500,
-      // },
+      autoplay: {
+        delay: 3500,
+      },
+      pagination: {
+        el: ".s-rec__slider-pagination",
+        clickable: true,
+      },
+    });
+  }
+
+  const gallerySlider = document.querySelector(".s-gallery__slider");
+
+  if (gallerySlider) {
+    const swiper = new Swiper(gallerySlider, {
+      speed: 800,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      centeredSlides: true,
+      initialSlide: 4,
+      loop: true,
+      loopAdditionalSlides: 2,
+      autoplay: {
+        delay: 3000,
+      },
       pagination: {
         el: ".s-rec__slider-pagination",
         clickable: true,

@@ -1,0 +1,48 @@
+.s-category-rec {
+  display: flex;
+  @include tablet {
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    aspect-ratio: 1/0.86;
+    overflow: hidden;
+
+    @include laptop-middle {
+      padding: 30px;
+    }
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.07);
+      }
+    }
+    &:nth-child(1) {
+      .s-category-rec__item-btn {
+        margin-left: auto;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform .3s linear;
+    }
+  }
+  &__item-btn {
+  }
+}

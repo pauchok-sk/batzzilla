@@ -12,3 +12,5 @@ headerDrop();
 headerSearch();
 sliders();
 headerScroll();
+
+Fancybox.bind("[data-fancybox]");
