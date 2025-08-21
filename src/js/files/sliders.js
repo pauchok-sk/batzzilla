@@ -55,4 +55,43 @@ export default function sliders() {
       },
     });
   }
+
+  const contentSlider = document.querySelector(".s-content__slider");
+
+  if (contentSlider) {
+    const swiper = new Swiper(contentSlider, {
+      speed: 800,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoHeight: true,
+      // autoplay: {
+      //   delay: 3300,
+      // },
+      navigation: {
+        prevEl: ".s-content .slider-btn._prev",
+        nextEl: ".s-content .slider-btn._next",
+      },
+      scrollbar: {
+        el: ".s-content .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+          autoHeight: false
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          autoHeight: false
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          autoHeight: false
+        },
+      },
+    });
+  }
 }

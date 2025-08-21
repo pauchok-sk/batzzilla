@@ -16,3 +16,16 @@
     margin: 50px 0px;
   }
 }
+.sect-p {
+  padding: 90px 0px;
+  @include laptop-min {
+    padding: 70px 0px;
+  }
+  @include tablet {
+    padding: 50px 0px;
+  }
+}
+
+.bg-gray {
+  background-color: var(--alabaster);
+}
