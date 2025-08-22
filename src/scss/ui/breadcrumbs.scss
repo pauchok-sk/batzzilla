@@ -1,0 +1,22 @@
+.aioseo-breadcrumbs {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  font-weight: 300;
+  font-size: 16px;
+}
+.aioseo-breadcrumb {
+  color: rgba(6, 6, 6, 0.5);
+  a {
+    color: var(--black);
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+}
+.aioseo-breadcrumb-separator {
+  color: var(--primary);
+}

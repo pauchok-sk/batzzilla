@@ -1,0 +1,152 @@
+.s-catalog {
+  &__head {
+    @include flex-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    gap: 30px;
+    row-gap: 15px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__head-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    border-radius: 6px;
+
+    font-weight: 300;
+    font-size: 18px;
+
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: #fbfbfb;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+    }
+
+    .num {
+      @include flex-center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      margin-left: auto;
+
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 12px;
+      color: white;
+    }
+  }
+  &__sort {
+    @include tablet-min {
+      width: 100%;
+    }
+    select {
+      cursor: pointer;
+    }
+    .SumoSelect {
+      cursor: pointer;
+      width: fit-content !important;
+      @include tablet-min {
+        width: 100% !important;
+      }
+      &.open {
+        .optWrapper {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0px);
+        }
+      }
+    }
+    .SelectBox {
+      cursor: pointer !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #ebebeb !important;
+      padding: 13px;
+      border-radius: 6px;
+      outline: none;
+      box-shadow: none !important;
+
+      transition: background-color 0.3s ease;
+
+      @include hover {
+        background-color: #fbfbfb;
+      }
+
+      span {
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 18px;
+        font-style: normal !important;
+        color: var(--black) !important;
+      }
+      span + label {
+        cursor: pointer;
+        position: static !important;
+        margin: 0 !important;
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        margin-left: auto !important;
+
+        background: url("@img/sort-icon.svg") center / 100% auto no-repeat;
+
+        i {
+          display: none;
+        }
+      }
+    }
+    .optWrapper {
+      top: 50px !important;
+      display: block !important;
+      padding: 15px;
+      background-color: white;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+      border-radius: 6px;
+      border: none;
+
+      opacity: 0;
+      transform: translateY(30px);
+      visibility: hidden;
+
+      transition: opacity .4s ease, transform .4s ease, visibility .4s ease;
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .opt {
+        font-weight: 300;
+        font-size: 18px;
+        padding: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+
+        transition: color .3s ease;
+
+        @include hover {
+          color: var(--primary);
+        }
+        &.selected {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

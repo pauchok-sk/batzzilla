@@ -1,3 +1,20 @@
+.m-title {
+  font-weight: 400;
+  font-size: 52px;
+  text-align: center;
+  margin: 0;
+
+  @include laptop-middle {
+    font-size: 46px;
+  }
+  @include laptop-min {
+    font-size: 38px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+}
+
 .s-title {
   font-weight: 400;
   font-size: 44px;

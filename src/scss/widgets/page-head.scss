@@ -1,0 +1,56 @@
+.page-head {
+  padding: 50px 0px;
+  @include laptop-min {
+    padding: 30px 0px;
+  }
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 15px;
+    margin: 20px -15px 0 -15px;
+    gap: 40px;
+
+    li {
+      flex-shrink: 0;
+      &:first-child {
+        margin-left: auto;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      font-weight: 300;
+      font-size: 18px;
+      padding-bottom: 9px;
+
+      @include hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+      &._active {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 2px;
+        background-color: var(--primary);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+}
