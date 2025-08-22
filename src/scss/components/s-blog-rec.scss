@@ -1,0 +1,27 @@
+.s-blog-rec {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    margin-top: 50px;
+
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      box-sizing: border-box;
+      @include tablet-min {
+        width: 270px !important;
+      }
+    }
+  }
+  &__slider-scrollbar {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}

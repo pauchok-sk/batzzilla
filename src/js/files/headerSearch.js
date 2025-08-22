@@ -6,6 +6,12 @@ export function headerSearch() {
 
     handleTop();
     window.addEventListener("resize", handleTop);
+    window.addEventListener("scroll", () => {
+      if (headerSearch.classList.contains("_open")) {
+        headerSearch.classList.remove("_open");
+        btn.classList.remove("_active");
+      }
+    });
 
     document.body.addEventListener("click", handleClose);
 

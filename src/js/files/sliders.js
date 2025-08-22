@@ -49,8 +49,8 @@ export default function sliders() {
       autoplay: {
         delay: 3000,
       },
-      pagination: {
-        el: ".s-rec__slider-pagination",
+      scrollbar: {
+        el: ".s-rec__slider-scrollbar",
         clickable: true,
       },
     });
@@ -64,9 +64,9 @@ export default function sliders() {
       slidesPerView: 1,
       spaceBetween: 20,
       autoHeight: true,
-      // autoplay: {
-      //   delay: 3300,
-      // },
+      autoplay: {
+        delay: 3300,
+      },
       navigation: {
         prevEl: ".s-content .slider-btn._prev",
         nextEl: ".s-content .slider-btn._next",
@@ -79,17 +79,49 @@ export default function sliders() {
         1540: {
           slidesPerView: 4,
           spaceBetween: 20,
-          autoHeight: false
+          autoHeight: false,
         },
         992: {
           slidesPerView: 3,
           spaceBetween: 20,
-          autoHeight: false
+          autoHeight: false,
         },
         576: {
           slidesPerView: 2,
           spaceBetween: 20,
-          autoHeight: false
+          autoHeight: false,
+        },
+      },
+    });
+  }
+
+  const blogRecSlider = document.querySelector(".s-blog-rec__slider");
+
+  if (blogRecSlider) {
+    const swiper = new Swiper(blogRecSlider, {
+      speed: 800,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoHeight: true,
+      autoplay: {
+        delay: 3300,
+      },
+      scrollbar: {
+        el: ".s-blog-rec .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
       },
     });

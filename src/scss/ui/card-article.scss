@@ -1,0 +1,90 @@
+.card-article {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 6px;
+  overflow: hidden;
+  color: white;
+  aspect-ratio: 1/1.5;
+
+  z-index: 1;
+
+  @include hover {
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 0;
+    }
+
+    .card-article__content {
+      padding-top: 20px;
+      max-height: 155px;
+    }
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    transition: opacity .3s ease;
+  }
+  &::before {
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+  &::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+  }
+
+  &__body {
+    padding: 30px;
+    @include desktop {
+      padding: 20px;
+    }
+  }
+  &__date {
+    font-size: 16px;
+    line-height: 145%;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 145%;
+    margin: 0;
+    @include desktop {
+      font-size: 24px
+    }
+    @include laptop-min {
+      font-size: 20px
+    }
+  }
+  &__content {
+    @include overflowText(5);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 145%;
+    margin: 0;
+
+    height: 100%;
+    max-height: 0px;
+
+    transition: max-height .3s linear, padding .3s linear;
+
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+}
