@@ -25,6 +25,9 @@
         <svg>
           <use xlink:href="img/icons/icons.svg#icon-filters"></use>
         </svg>
+        <svg>
+          <use xlink:href="img/icons/icons.svg#icon-close"></use>
+        </svg>
         <span>Фильтры</span>
         <div class="num">3</div>
       </div>
@@ -38,217 +41,496 @@
       </div>
     </div>
     <div class="s-catalog__wrapper">
+      <div class="s-catalog__filters-overlay" id="filters-overlay"></div>
       <div class="s-catalog__filters" id="filters">
-        <div data-spollers class="s-catalog__filters-spollers">
-          <div class="s-catalog__filter-spoller">
-            <div data-spoller class="s-catalog__spoller-btn">
-              <span>Категории</span>
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-down"></use>
-              </svg>
+        <div class="s-catalog__filters-inside">
+          <div data-spollers class="s-catalog__filters-spollers">
+            <div class="s-catalog__filters-head">
+              <div class="s-catalog__filters-title">Фильры</div>
+              <div class="s-catalog__filters-close" id="filters-close">
+                <svg>
+                  <use xlink:href='img/icons/icons.svg#icon-close'></use>
+                </svg>
+              </div>
             </div>
-            <div>
-              <div class="s-catalog__spoller-body">
-                <div
-                  class="berocket_single_filter_widget berocket_single_filter_widget_70"
-                  data-id="70"
-                  style=""
-                >
+            <div class="s-catalog__filter-spoller">
+              <div data-spoller class="s-catalog__spoller-btn">
+                <span>Категории</span>
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                </svg>
+              </div>
+              <div>
+                <div class="s-catalog__spoller-body">
                   <div
-                    class="bapf_sfilter bapf_ckbox bapf_hideckbox"
-                    data-op="OR"
-                    data-taxonomy="pa_liczevaya-storona"
-                    id="bapf_3"
+                    class="berocket_single_filter_widget berocket_single_filter_widget_70"
+                    data-id="70"
+                    style=""
                   >
-                    <div class="bapf_head"><h3>Категории</h3></div>
-                    <div class="bapf_body">
-                      <ul>
-                        <li class="checked">
-                          <input
-                            id="bapf_3_32"
-                            type="checkbox"
-                            value="32"
-                            checked="checked"
-                          />
-                          <label for="bapf_3_32">Верх</label>
-                        </li>
-                        <li class="checked">
-                          <input
-                            id="bapf_3_46"
-                            type="checkbox"
-                            value="46"
-                            checked="checked"
-                          />
-                          <label for="bapf_3_46">Аксессуары</label>
-                        </li>
-                        <li>
-                          <input id="bapf_3_91" type="checkbox" value="91" />
-                          <label for="bapf_3_91">Штаны</label>
-                        </li>
-                      </ul>
+                    <div
+                      class="bapf_sfilter bapf_ckbox bapf_hideckbox"
+                      data-op="OR"
+                      data-taxonomy="pa_liczevaya-storona"
+                      id="bapf_3"
+                    >
+                      <div class="bapf_head"><h3>Категории</h3></div>
+                      <div class="bapf_body">
+                        <ul>
+                          <li class="checked">
+                            <input
+                              id="bapf_3_32"
+                              type="checkbox"
+                              value="32"
+                              checked="checked"
+                            />
+                            <label for="bapf_3_32">Верх</label>
+                          </li>
+                          <li class="checked">
+                            <input
+                              id="bapf_3_46"
+                              type="checkbox"
+                              value="46"
+                              checked="checked"
+                            />
+                            <label for="bapf_3_46">Аксессуары</label>
+                          </li>
+                          <li>
+                            <input id="bapf_3_91" type="checkbox" value="91" />
+                            <label for="bapf_3_91">Штаны</label>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="s-catalog__filter-spoller">
-            <div data-spoller class="s-catalog__spoller-btn">
-              <span>Коллекция</span>
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-down"></use>
-              </svg>
-            </div>
-            <div>
-              <div class="s-catalog__spoller-body">
-                <div
-                  class="berocket_single_filter_widget berocket_single_filter_widget_70"
-                  data-id="70"
-                  style=""
-                >
+            <div class="s-catalog__filter-spoller">
+              <div data-spoller class="s-catalog__spoller-btn">
+                <span>Коллекция</span>
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                </svg>
+              </div>
+              <div>
+                <div class="s-catalog__spoller-body">
                   <div
-                    class="bapf_sfilter bapf_ckbox bapf_hideckbox"
-                    data-op="OR"
-                    data-taxonomy="pa_liczevaya-storona"
-                    id="bapf_3"
+                    class="berocket_single_filter_widget berocket_single_filter_widget_70"
+                    data-id="70"
+                    style=""
                   >
-                    <div class="bapf_head"><h3>Коллекция</h3></div>
-                    <div class="bapf_body">
-                      <ul>
-                        <li class="checked">
-                          <input
-                            id="k1"
-                            type="checkbox"
-                            value="32"
-                            checked="checked"
-                          />
-                          <label for="k1">Коллекция</label>
-                        </li>
-                        <li class="checked">
-                          <input
-                            id="k2"
-                            type="checkbox"
-                            value="46"
-                            checked="checked"
-                          />
-                          <label for="k2">Коллекция</label>
-                        </li>
-                        <li>
-                          <input id="k3" type="checkbox" value="91" />
-                          <label for="k3">Коллекция</label>
-                        </li>
-                      </ul>
+                    <div
+                      class="bapf_sfilter bapf_ckbox bapf_hideckbox"
+                      data-op="OR"
+                      data-taxonomy="pa_liczevaya-storona"
+                      id="bapf_3"
+                    >
+                      <div class="bapf_head"><h3>Коллекция</h3></div>
+                      <div class="bapf_body">
+                        <ul>
+                          <li class="checked">
+                            <input
+                              id="k1"
+                              type="checkbox"
+                              value="32"
+                              checked="checked"
+                            />
+                            <label for="k1">Коллекция</label>
+                          </li>
+                          <li class="checked">
+                            <input
+                              id="k2"
+                              type="checkbox"
+                              value="46"
+                              checked="checked"
+                            />
+                            <label for="k2">Коллекция</label>
+                          </li>
+                          <li>
+                            <input id="k3" type="checkbox" value="91" />
+                            <label for="k3">Коллекция</label>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="s-catalog__filter-spoller">
-            <div data-spoller class="s-catalog__spoller-btn">
-              <span>Размер</span>
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-down"></use>
-              </svg>
-            </div>
-            <div>
-              <div class="s-catalog__spoller-body">
-                <div
-                  class="berocket_single_filter_widget berocket_single_filter_widget_70"
-                  data-id="70"
-                  style=""
-                >
+            <div class="s-catalog__filter-spoller">
+              <div data-spoller class="s-catalog__spoller-btn">
+                <span>Размер</span>
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                </svg>
+              </div>
+              <div>
+                <div class="s-catalog__spoller-body">
                   <div
-                    class="bapf_sfilter bapf_ckbox bapf_hideckbox"
-                    data-op="OR"
-                    data-taxonomy="pa_liczevaya-storona"
-                    id="bapf_3"
+                    class="berocket_single_filter_widget berocket_single_filter_widget_70"
+                    data-id="70"
+                    style=""
                   >
-                    <div class="bapf_head"><h3>Размер</h3></div>
-                    <div class="bapf_body">
-                      <ul>
-                        <li class="checked">
-                          <input
-                            id="r1"
-                            type="checkbox"
-                            value="32"
-                            checked="checked"
-                          />
-                          <label for="r1">Размер</label>
-                        </li>
-                        <li class="checked">
-                          <input
-                            id="r2"
-                            type="checkbox"
-                            value="46"
-                            checked="checked"
-                          />
-                          <label for="r2">Размер</label>
-                        </li>
-                        <li>
-                          <input id="r3" type="checkbox" value="91" />
-                          <label for="r3">Размер</label>
-                        </li>
-                      </ul>
+                    <div
+                      class="bapf_sfilter bapf_ckbox bapf_hideckbox"
+                      data-op="OR"
+                      data-taxonomy="pa_liczevaya-storona"
+                      id="bapf_3"
+                    >
+                      <div class="bapf_head"><h3>Размер</h3></div>
+                      <div class="bapf_body">
+                        <ul>
+                          <li class="checked">
+                            <input
+                              id="r1"
+                              type="checkbox"
+                              value="32"
+                              checked="checked"
+                            />
+                            <label for="r1">Размер</label>
+                          </li>
+                          <li class="checked">
+                            <input
+                              id="r2"
+                              type="checkbox"
+                              value="46"
+                              checked="checked"
+                            />
+                            <label for="r2">Размер</label>
+                          </li>
+                          <li>
+                            <input id="r3" type="checkbox" value="91" />
+                            <label for="r3">Размер</label>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="s-catalog__filter-spoller">
-            <div data-spoller class="s-catalog__spoller-btn _spoller-active">
-              <span>Стоимость</span>
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-down"></use>
-              </svg>
-            </div>
-            <div>
-              <div class="s-catalog__spoller-body">
-                <div
-                  class="berocket_single_filter_widget berocket_single_filter_widget_164 bapf_wid_"
-                  data-wid=""
-                  data-id="164"
-                  style=""
-                >
+            <div class="s-catalog__filter-spoller">
+              <div data-spoller class="s-catalog__spoller-btn _spoller-active">
+                <span>Стоимость</span>
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                </svg>
+              </div>
+              <div>
+                <div class="s-catalog__spoller-body">
                   <div
-                    class="bapf_sfilter bapf_slidr bapf_slidr_jqrui bapf_slidr_ready"
-                    data-op="slidr"
-                    data-taxonomy="price"
-                    id="bapf_1"
+                    class="berocket_single_filter_widget berocket_single_filter_widget_164 bapf_wid_"
+                    data-wid=""
+                    data-id="164"
+                    style=""
                   >
-                    <div class="bapf_body">
-                      <div class="bapf_slidr_all">
-                        <span class="bapf_from"><input type="text" value="999" /></span>
-                        <span class="bapf_to"><input type="text" value="20000" /></span>
-                        <div
-                          class="bapf_slidr_main bapf_slidr_num ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                          data-display="wc_price"
-                          data-min="0"
-                          data-start="0"
-                          data-max="13891"
-                          data-end="13891"
-                          data-step="1"
-                        >
+                    <div
+                      class="bapf_sfilter bapf_slidr bapf_slidr_jqrui bapf_slidr_ready"
+                      data-op="slidr"
+                      data-taxonomy="price"
+                      id="bapf_1"
+                    >
+                      <div class="bapf_body">
+                        <div class="bapf_slidr_all">
+                          <span class="bapf_from">
+                            <input type="text" value="999" />
+                          </span>
+                          <span class="bapf_to">
+                            <input type="text" value="20000" />
+                          </span>
                           <div
-                            class="ui-slider-range ui-corner-all ui-widget-header"
-                            style="left: 0%; width: 100%"
-                          ></div>
-                          <span
-                            tabindex="0"
-                            class="ui-slider-handle ui-corner-all ui-state-default"
-                            style="left: 0%"
-                          ></span>
-                          <span
-                            tabindex="0"
-                            class="ui-slider-handle ui-corner-all ui-state-default"
-                            style="left: 100%"
-                          ></span>
+                            class="bapf_slidr_main bapf_slidr_num ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                            data-display="wc_price"
+                            data-min="0"
+                            data-start="0"
+                            data-max="13891"
+                            data-end="13891"
+                            data-step="1"
+                          >
+                            <div
+                              class="ui-slider-range ui-corner-all ui-widget-header"
+                              style="left: 0%; width: 100%"
+                            ></div>
+                            <span
+                              tabindex="0"
+                              class="ui-slider-handle ui-corner-all ui-state-default"
+                              style="left: 0%"
+                            ></span>
+                            <span
+                              tabindex="0"
+                              class="ui-slider-handle ui-corner-all ui-state-default"
+                              style="left: 100%"
+                            ></span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-catalog__filter-nav">
+            <button class="btn-s s-catalog__filter-send">Применить</button>
+            <a href="#" class="s-catalog__filter-reset">Сбросить</a>
+          </div>
+        </div>
+      </div>
+      <div class="s-catalog__main">
+        <div class="grid">
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-product">
+            <a href="#" class="card-product__gallery">
+              <img src="@img/product.jpg" alt="image" />
+            </a>
+            <a href="#" class="card-product__title">
+              "Inflight W", натуральный мембранный женский пуховик, лагуна
+            </a>
+            <div class="card-product__footer">
+              <div class="card-product__price">13 900₽</div>
+              <div class="card-product__like _active">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+                </svg>
               </div>
             </div>
           </div>
