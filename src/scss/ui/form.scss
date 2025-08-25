@@ -1,0 +1,68 @@
+.input-control {
+  width: 100%;
+}
+.input {
+  border-radius: 6px;
+  border: 1px solid #ebebeb;
+  background-color: white;
+  padding: 24px;
+  width: 100%;
+  outline: none;
+
+  font-weight: 300;
+  font-size: 16px;
+
+  transition: border-color 0.3s ease;
+
+  @include tablet {
+    padding: 16px;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  &:focus {
+    border-color: var(--black);
+  }
+}
+.input-check {
+  display: none;
+  &:checked + label {
+    &::before {
+      background: url('@img/check-primary.svg') center / 80% auto no-repeat;
+    }
+  }
+}
+.label-checbkox {
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+
+  font-weight: 300;
+  font-size: 14px;
+  color: #b5b5b5;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    background-color: white;
+  }
+}
+.form-btn {
+  width: 100%;
+}

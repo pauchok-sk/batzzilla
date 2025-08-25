@@ -49,6 +49,27 @@
       color: var(--black);
     }
   }
+  &._outline-primary {
+    color: var(--black);
+    background-color: transparent;
+    border-color: var(--primary);
+
+    @include hover {
+      background-color: var(--primary);
+      color: white;
+    }
+  }
+  &._outline-gray {
+    color: var(--black);
+    background-color: transparent;
+    border-color: #ebebeb;
+
+    @include hover {
+      border-color: var(--black);
+      background-color: var(--black);
+      color: white;
+    }
+  }
 
   svg {
     width: 11px;
@@ -88,4 +109,8 @@
 
     transition: transform 0.3s ease;
   }
+}
+
+.btn-l {
+  
 }

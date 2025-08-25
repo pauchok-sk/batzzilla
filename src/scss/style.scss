@@ -18,10 +18,14 @@
 @import "./ui/grid";
 @import "./ui/card-article";
 @import "./ui/breadcrumbs";
+@import "./ui/form";
 
 // widgets
 @import "./widgets/burger";
 @import "./widgets/page-head";
+@import "./widgets/modal";
+@import "./widgets/modal-right";
+@import "./widgets/size";
 
 // components
 @import "./components/header";
@@ -34,5 +38,6 @@
 @import "./components/s-content";
 @import "./components/s-blog-rec";
 @import "./components/s-catalog";
+@import "./components/s-product";
 
 @import "./components/footer";
