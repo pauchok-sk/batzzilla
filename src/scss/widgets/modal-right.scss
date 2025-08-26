@@ -1,10 +1,116 @@
 .modal-right-overlay {
-  
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  &._active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .modal-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 700px;
+  max-width: 100%;
+  background-color: white;
+  z-index: 110;
+
+  transform: translateX(-40px);
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+
+  &._open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+  }
+  &__inside {
+    overflow-y: auto;
+    height: 100%;
+  }
   &__body {
+    padding: 50px;
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 30px 15px;
+    }
+  }
+  &__close {
+    @include flex-center;
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: var(--black);
+    color: white;
+
+    transition: background-color 0.3s ease;
+    @include hover {
+      background-color: var(--black-l);
+    }
+    @include laptop-min {
+      top: 20px;
+      right: 20px;
+      left: auto;
+      transform: translateX(0);
+    }
+    @include tablet {
+      width: 35px;
+      height: 35px;
+      top: 15px;
+      right: 15px;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      @include tablet {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
   &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: center;
+    margin: 0px 0px 100px 0px;
+    @include laptop-min {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
   }
 }

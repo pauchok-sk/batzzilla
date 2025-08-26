@@ -1,0 +1,90 @@
+.size {
+  &__nav {
+    display: flex;
+    gap: 40px;
+
+    .btn-l {
+      &:first-child {
+        margin-left: auto;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+  &__table {
+    margin-top: 40px;
+
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &__head {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f2f2f2;
+  }
+  &__table-cell {
+    @include flex-center;
+    flex: 1;
+  }
+  &__row {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f2f2f2;
+    &:nth-child(even) {
+      background: white;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding: 50px;
+    border-top: 1px solid var(--gray);
+    img {
+      flex-shrink: 0;
+    }
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 30px 15px;
+      img {
+        width: 150px;
+      }
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
+      img {
+        width: 225px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__descr {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 145%;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    strong {
+      font-weight: 400;
+    }
+  }
+}

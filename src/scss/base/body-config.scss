@@ -29,3 +29,27 @@
 .bg-gray {
   background-color: var(--alabaster);
 }
+
+.content {
+  font-size: 18px;
+  line-height: 145%;
+  font-weight: 300;
+
+  @include laptop-min {
+    font-size: 16px;
+  }
+
+  * {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include laptop-min {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}

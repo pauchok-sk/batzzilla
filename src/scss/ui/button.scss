@@ -112,5 +112,36 @@
 }
 
 .btn-l {
-  
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  padding-bottom: 7px;
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &._active {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    transform: translateX(-50%);
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    width: 35px;
+    background-color: var(--primary);
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+  }
 }

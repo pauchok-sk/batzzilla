@@ -41,8 +41,8 @@
     }
   }
   &__info {
-    // position: sticky;
-    top: 30px;
+    position: sticky;
+    top: 120px;
     flex: 0 1 600px;
     flex-shrink: 0;
     @include laptop-middle {
