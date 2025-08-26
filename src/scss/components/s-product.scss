@@ -101,6 +101,11 @@
   &__stars {
     display: flex;
     gap: 3px;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
   }
   &__share {
     display: flex;

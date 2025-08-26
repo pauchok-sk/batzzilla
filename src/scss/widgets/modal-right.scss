@@ -45,13 +45,21 @@
   &__wrapper {
     position: relative;
     height: 100%;
+    @include tablet-min {
+      padding-top: 40px;
+    }
   }
   &__inside {
     overflow-y: auto;
     height: 100%;
   }
-  &__body {
+  &__container {
     padding: 50px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--gray);
+    }
+
     @include laptop-min {
       padding: 30px;
     }
@@ -103,14 +111,45 @@
     font-size: 32px;
     line-height: 110%;
     text-align: center;
-    margin: 0px 0px 100px 0px;
+    margin: 0px;
     @include laptop-min {
       font-size: 28px;
-      margin-bottom: 40px;
     }
     @include tablet {
-      margin-bottom: 30px;
       font-size: 24px;
     }
+  }
+  &__cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__cart-footer {
+  }
+  &__cart-result {
+    @include flex-between;
+    gap: 15px;
+    margin-bottom: 30px;
+  
+    font-size: 24px;
+    line-height: 110%;
+
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    span {
+      &:first-child {
+        font-weight: 300;
+      }
+    }
+  }
+  &__cart-btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__cart-btn-arrow {
+    margin: 0 auto;
   }
 }

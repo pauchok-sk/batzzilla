@@ -1,0 +1,116 @@
+.cart-item {
+  display: flex;
+  gap: 25px;
+  &:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+  }
+  &__gallery {
+    height: auto;
+    aspect-ratio: 1/1.6;
+    width: 150px;
+    border-radius: 6px;
+    display: block;
+    overflow: hidden;
+
+    transition: opacity 0.3s ease;
+    @include hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    display: block;
+    font-size: 20px;
+    line-height: 135%;
+    margin: 0px 0px 20px 0px;
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  &__spec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+      font-weight: 300;
+      font-size: 16px;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      span {
+        &:first-child {
+          color: var(--dove);
+        }
+      }
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    gap: 20px;
+    margin-top: auto;
+  }
+  &__prices {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__price {
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__old-price {
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    color: var(--dove);
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    color: #bfbfbf;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

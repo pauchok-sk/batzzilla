@@ -20,6 +20,8 @@
 @import "./ui/breadcrumbs";
 @import "./ui/form";
 @import "./ui/tab";
+@import "./ui/cart-item";
+@import "./ui/more-items";
 
 // widgets
 @import "./widgets/burger";
@@ -27,6 +29,7 @@
 @import "./widgets/modal";
 @import "./widgets/modal-right";
 @import "./widgets/size";
+@import "./widgets/full-stars";
 
 // components
 @import "./components/header";
@@ -41,5 +44,7 @@
 @import "./components/s-catalog";
 @import "./components/s-product";
 @import "./components/s-product-descr";
+@import "./components/s-reviews";
+@import "./components/s-viewed";
 
 @import "./components/footer";

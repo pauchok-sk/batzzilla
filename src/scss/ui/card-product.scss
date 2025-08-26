@@ -70,6 +70,7 @@
   &__footer {
     @include flex-between;
     gap: 15px;
+    margin-top: auto;
   }
   &__price {
     font-weight: 300;

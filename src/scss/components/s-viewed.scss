@@ -1,0 +1,28 @@
+.s-viewed {
+  overflow: hidden;
+  &__slider {
+    @include tablet-min {
+      overflow: visible !important;
+    }
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    .swiper-slide {
+      height: auto !important;
+      @include tablet-min {
+        width: 285px !important;
+      }
+    }
+    .card-product {
+      min-height: 100%;
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+  &__slider-scrollbar {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

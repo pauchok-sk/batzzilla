@@ -51,3 +51,91 @@
     <button class="btn-s form-btn">Отправить заявку</button>
   </form>
 </div>
+
+<div class="modal modal-reviews" id="modal-reviews">
+  <div data-fancybox-close class="modal__close">
+    <svg>
+      <use xlink:href="img/icons/icons.svg#icon-close"></use>
+    </svg>
+  </div>
+  <h3 class="s-title modal__title">Оставьте свой отзыв</h3>
+  <div class="modal-reviews__body">
+    <div class="modal-reviews__product">
+      <img
+        src="@img/product.jpg"
+        alt="image"
+        class="modal-reviews__product-img"
+      />
+      <div class="modal-reviews__title">
+        "Inflight W", натуральный мембранный пуховик
+      </div>
+    </div>
+    <form action="#" class="modal-reviews__form">
+      <div class="modal-reviews__form-control">
+        <div class="modal-reviews__form-title">Ваше имя</div>
+        <input type="text" class="input" />
+      </div>
+      <div class="modal-reviews__form-control">
+        <div class="modal-reviews__form-title">Оцените</div>
+        <div class="full-stars">
+          <div class="rating-group">
+            <input name="fst" value="0" type="radio" disabled checked />
+            <label for="fst-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <input name="fst" id="fst-1" value="1" type="radio" />
+            <label for="fst-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <input name="fst" id="fst-2" value="2" type="radio" />
+            <label for="fst-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <input name="fst" id="fst-3" value="3" type="radio" />
+            <label for="fst-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <input name="fst" id="fst-4" value="4" type="radio" />
+            <label for="fst-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <input name="fst" id="fst-5" value="5" type="radio" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-reviews__form-control">
+        <div class="modal-reviews__form-title">Отзыв</div>
+        <textarea rows="8" class="input"></textarea>
+      </div>
+      <button class="btn-s modal-reviews__send">Отправить отзыв</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal modal-review" id="modal-review">
+  <div data-fancybox-close class="modal__close">
+    <svg>
+      <use xlink:href="img/icons/icons.svg#icon-close"></use>
+    </svg>
+  </div>
+  <div class="modal-review__head">
+    <div class="s-reviews__head-info">
+      <div class="modal-review__name" id="review-name"></div>
+      <div class="modal-review__date" id="review-date"></div>
+    </div>
+    <div class="modal-review__stars" id="review-stars"></div>
+  </div>
+  <div class="modal-review__body">
+    <p class="content modal-review__content" id="review-content"></p>
+  </div>
+</div>

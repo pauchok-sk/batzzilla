@@ -28,9 +28,9 @@ export default function sliders() {
       autoplay: {
         delay: 3500,
       },
-      pagination: {
-        el: ".s-rec__slider-pagination",
-        clickable: true,
+      scrollbar: {
+        el: ".s-rec__slider-scrollbar",
+        draggable: true,
       },
     });
   }
@@ -112,6 +112,46 @@ export default function sliders() {
       },
       breakpoints: {
         1366: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const viewedSlider = document.querySelector(".s-viewed__slider");
+
+  if (viewedSlider) {
+    const swiper = new Swiper(viewedSlider, {
+      speed: 800,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoHeight: true,
+      autoplay: {
+        delay: 3300,
+      },
+      scrollbar: {
+        el: ".s-viewed .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1680: {
+          slidesPerView: 6,
+          spaceBetween: 20,
+        },
+        1366: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        1200: {
           slidesPerView: 4,
           spaceBetween: 20,
         },

@@ -1,0 +1,32 @@
+.full-stars {
+  display: flex;
+  gap: 3px;
+}
+.full-stars .rating-group {
+  display: inline-flex;
+}
+.full-stars input {
+  position: absolute;
+  left: -9999px;
+}
+.full-stars label {
+  margin: 0;
+  cursor: pointer;
+}
+.full-stars label svg {
+  margin: 2px;
+  height: 17px;
+  width: 17px;
+  color: var(--primary);
+  transition: fill 0.3s;
+  transition: color .3s ease;
+}
+.full-stars input:checked ~ label svg {
+  color: var(--black);
+}
+.full-stars .rating-group:hover label svg {
+  color: var(--primary);
+}
+.full-stars .rating-group input:hover ~ label svg {
+  color: var(--black);
+}
