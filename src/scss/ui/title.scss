@@ -37,3 +37,14 @@
     }
   }
 }
+
+.l-title {
+  font-weight: 400;
+  font-size: 32px;
+  @include laptop-min {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 24px;
+  }
+}

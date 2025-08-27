@@ -1,0 +1,115 @@
+.s-history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__spoller {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  &__spoller-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    cursor: pointer;
+    background-color: var(--alabaster);
+
+    font-size: 20px;
+
+    @include laptop-min {
+      font-size: 18px;
+      padding: 20px;
+    }
+    @include tablet {
+      padding: 15px 10px;
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .id {
+      flex: 0 1 200px;
+      @include tablet {
+        flex-basis: 120px;
+      }
+    }
+    .status {
+      flex: 1;
+
+      &._green {
+        color: var(--green);
+      }
+      &._red {
+        color: var(--red);
+      }
+      &._primary {
+        color: var(--primary);
+      }
+    }
+    .date {
+      flex: 0 1 185px;
+      @include tablet {
+        flex-basis: 100px;
+      }
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+
+      transition: transform .3s ease;
+    }
+  }
+  &__spoller-body {
+    display: flex;
+    gap: 50px;
+    border: 2px solid var(--alabaster);
+    padding: 30px;
+
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    @include tablet {
+      padding: 15px 10px;
+    }
+  
+    .sidebar {
+      width: 500px;
+
+      @include laptop-middle {
+        padding: 30px 20px;
+        width: 350px;
+      }
+      @include laptop-min {
+        width: 400px;
+        max-width: 100%;
+      }
+
+      &__title {
+        font-size: 24px;
+      }
+      &__list {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+}

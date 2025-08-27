@@ -22,7 +22,9 @@
 
     a {
       position: relative;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 15px;
       font-weight: 300;
       font-size: 18px;
       padding-bottom: 9px;
@@ -50,6 +52,11 @@
         opacity: 0;
 
         transition: opacity 0.3s ease;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
       }
     }
   }

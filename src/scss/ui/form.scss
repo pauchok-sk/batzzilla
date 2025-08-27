@@ -1,6 +1,14 @@
 .input-control {
   width: 100%;
 }
+.label-input {
+  display: block;
+  margin-bottom: 8px;
+
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--dove);
+}
 .input,
 .input-text {
   border-radius: 6px;
@@ -98,7 +106,7 @@ textarea.input {
     &:checked + label {
       border-color: var(--primary);
       &::after {
-        opacity: 1
+        opacity: 1;
       }
     }
   }
@@ -128,13 +136,13 @@ textarea.input {
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background: url('@img/check-primary.svg') center / 13px auto no-repeat;
+      background: url("@img/check-primary.svg") center / 13px auto no-repeat;
       background-color: var(--gray);
       right: 25px;
 
       opacity: 0;
 
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
     }
   }
 }

@@ -22,6 +22,7 @@
 @import "./ui/tab";
 @import "./ui/cart-item";
 @import "./ui/more-items";
+@import "./ui/card-history";
 
 // widgets
 @import "./widgets/burger";
@@ -50,5 +51,8 @@
 @import "./components/s-connect";
 @import "./components/s-cart";
 @import "./components/s-checkout";
+@import "./components/s-account";
+@import "./components/s-profile";
+@import "./components/s-history";
 
 @import "./components/footer";
