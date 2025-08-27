@@ -3,8 +3,8 @@
     display: flex;
     align-items: start;
     gap: 50px;
-    @include laptop-middle {
-      gap: 40px;
+    @include laptop {
+      gap: 30px;
     }
     @include laptop-min {
       flex-wrap: wrap;
@@ -24,5 +24,55 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  &__profile-item {
+  }
+  &__profile-item-title {
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+    @include laptop-min {
+      font-size: 28px;
+    }
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+  &__profile-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    row-gap: 30px;
+
+    @include laptop {
+      gap: 20px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      margin: 0;
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+
+        font-weight: 300;
+        font-size: 16px;
+        color: var(--dove);
+
+        .required {
+          display: none;
+        }
+      }
+    }
   }
 }

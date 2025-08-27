@@ -1,0 +1,323 @@
+<section class="sect-m s-cart mt-off">
+  <div class="container">
+    <div class="page-head">
+      <div class="aioseo-breadcrumbs">
+        <span class="aioseo-breadcrumb">
+          <a href="https://timer-alliance.ru" title="Главная">Главная</a>
+        </span>
+        <span class="aioseo-breadcrumb-separator">></span>
+        <span class="aioseo-breadcrumb">Оформление заказа</span>
+      </div>
+      <h1 class="m-title">Оформление заказа</h1>
+    </div>
+    <div class="s-checkout__wrapper">
+      <div class="s-checkout__main">
+        <div class="s-checkout__profile">
+          <div class="s-checkout__profile-item">
+            <h3 class="s-checkout__profile-item-title">Личная информация</h3>
+            <div class="s-checkout__profile-item-wrapper">
+              <p
+                class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text checkout-sect__row validate-required"
+              >
+                <label for="billing_first_name" class="required_field">
+                  Имя&nbsp;
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                  <input
+                    type="text"
+                    class="input-text"
+                    id="billing_first_name"
+                  />
+                </span>
+              </p>
+              <p
+                class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text checkout-sect__row validate-required"
+              >
+                <label for="billing_last_name" class="required_field">
+                  Фамилия&nbsp;
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                  <input
+                    type="text"
+                    class="input-text"
+                    id="billing_last_name"
+                  />
+                </span>
+              </p>
+              <p
+                class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text checkout-sect__row validate-required"
+              >
+                <label for="billing_tel" class="required_field">
+                  Телефон&nbsp;
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                  <input
+                    type="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    class="input-text"
+                    id="billing_tel"
+                  />
+                </span>
+              </p>
+              <p
+                class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text checkout-sect__row validate-required"
+              >
+                <label for="billing_mail" class="required_field">
+                  Email&nbsp;
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <span class="woocommerce-input-wrapper">
+                  <input type="email" class="input-text" id="billing_mail" />
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="s-checkout__profile-item">
+            <h3 class="s-checkout__profile-item-title">Способы доставки</h3>
+            <div id="delivery" class="woocommerce-checkout-payment">
+              <ul
+                class="wc_payment_methods payment_methods methods s-order__block-wrapper"
+              >
+                <li class="wc_payment_method payment_method_yookassa_epl">
+                  <input
+                    id="delivery-1"
+                    type="radio"
+                    class="input-radio"
+                    name="delivery"
+                    value="yookassa_epl"
+                    checked="checked"
+                    data-order_button_text=""
+                  />
+
+                  <label for="delivery-1">
+                    СДЭК
+                  </label>
+                </li>
+                <li class="wc_payment_method payment_method_dolyamepayment">
+                  <input
+                    id="delivery-2"
+                    type="radio"
+                    class="input-radio"
+                    name="delivery"
+                    value="dolyamepayment"
+                    data-order_button_text="Оплата Долями"
+                  />
+
+                  <label for="delivery-2">
+                    Курьером 500 ₽
+                  </label>
+                  <div
+                    class="payment_box payment_method_dolyamepayment"
+                    style="display: none"
+                  >
+                    <p>Разделите оплату на 4 части без комиссий и переплат</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="form-row place-order">
+                <noscript>
+                  Поскольку ваш браузер не поддерживает JavaScript или в нем он
+                  отключен, просим убедиться в том, что вы нажали кнопку
+                  <em>Обновить итог</em>
+                  перед регистрацией заказа. Иначе, есть риск неправильного
+                  подсчета стоимости.
+                  <br />
+                  <button
+                    type="submit"
+                    class="button alt"
+                    name="woocommerce_checkout_update_totals"
+                    value="Обновить итог"
+                  >
+                    Обновить итог
+                  </button>
+                </noscript>
+
+                <div class="woocommerce-terms-and-conditions-wrapper">
+                  <div class="woocommerce-privacy-policy-text">
+                    <p>
+                      Ваши персональные данные будут использоваться для
+                      обработки ваших заказов, упрощения вашего взаимодействия с
+                      сайтом и для прочих целей, описанных в документе
+                      <a
+                        href="https://fitolooks.com/privacy-policy/"
+                        class="woocommerce-privacy-policy-link"
+                        target="_blank"
+                      >
+                        политика конфиденциальности
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="button alt"
+                  name="woocommerce_checkout_place_order"
+                  id="place_order"
+                  value="Подтвердить заказ"
+                  data-value="Подтвердить заказ"
+                >
+                  Подтвердить заказ
+                </button>
+
+                <input
+                  type="hidden"
+                  id="woocommerce-process-checkout-nonce"
+                  name="woocommerce-process-checkout-nonce"
+                  value="c2433f9d93"
+                />
+                <input
+                  type="hidden"
+                  name="_wp_http_referer"
+                  value="/?wc-ajax=update_order_review"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="s-checkout__profile-item">
+            <h3 class="s-checkout__profile-item-title">Способы оплаты</h3>
+            <div id="payment" class="woocommerce-checkout-payment">
+              <ul
+                class="wc_payment_methods payment_methods methods s-order__block-wrapper"
+              >
+                <li class="wc_payment_method payment_method_yookassa_epl">
+                  <input
+                    id="payment_method_yookassa_epl"
+                    type="radio"
+                    class="input-radio"
+                    name="payment_method"
+                    value="yookassa_epl"
+                    checked="checked"
+                    data-order_button_text=""
+                  />
+
+                  <label for="payment_method_yookassa_epl">
+                    Оплата онлайн
+                  </label>
+                </li>
+                <li class="wc_payment_method payment_method_dolyamepayment">
+                  <input
+                    id="payment_method_dolyamepayment"
+                    type="radio"
+                    class="input-radio"
+                    name="payment_method"
+                    value="dolyamepayment"
+                    data-order_button_text="Оплата Долями"
+                  />
+
+                  <label for="payment_method_dolyamepayment">
+                    Долями
+                    <img src="@img/dol.svg" alt="icon">
+                  </label>
+                  <div
+                    class="payment_box payment_method_dolyamepayment"
+                    style="display: none"
+                  >
+                    <p>Разделите оплату на 4 части без комиссий и переплат</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="form-row place-order">
+                <noscript>
+                  Поскольку ваш браузер не поддерживает JavaScript или в нем он
+                  отключен, просим убедиться в том, что вы нажали кнопку
+                  <em>Обновить итог</em>
+                  перед регистрацией заказа. Иначе, есть риск неправильного
+                  подсчета стоимости.
+                  <br />
+                  <button
+                    type="submit"
+                    class="button alt"
+                    name="woocommerce_checkout_update_totals"
+                    value="Обновить итог"
+                  >
+                    Обновить итог
+                  </button>
+                </noscript>
+
+                <div class="woocommerce-terms-and-conditions-wrapper">
+                  <div class="woocommerce-privacy-policy-text">
+                    <p>
+                      Ваши персональные данные будут использоваться для
+                      обработки ваших заказов, упрощения вашего взаимодействия с
+                      сайтом и для прочих целей, описанных в документе
+                      <a
+                        href="https://fitolooks.com/privacy-policy/"
+                        class="woocommerce-privacy-policy-link"
+                        target="_blank"
+                      >
+                        политика конфиденциальности
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="button alt"
+                  name="woocommerce_checkout_place_order"
+                  id="place_order"
+                  value="Подтвердить заказ"
+                  data-value="Подтвердить заказ"
+                >
+                  Подтвердить заказ
+                </button>
+
+                <input
+                  type="hidden"
+                  id="woocommerce-process-checkout-nonce"
+                  name="woocommerce-process-checkout-nonce"
+                  value="c2433f9d93"
+                />
+                <input
+                  type="hidden"
+                  name="_wp_http_referer"
+                  value="/?wc-ajax=update_order_review"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h3 class="sidebar__title">Информация о заказе</h3>
+        <ul class="list sidebar__list">
+          <li>
+            <span>Всего товаров</span>
+            <span>2 товара</span>
+          </li>
+          <li>
+            <span>Сумма заказа</span>
+            <span>29 800 ₽</span>
+          </li>
+          <li>
+            <span>Сумма скидки</span>
+            <span>2 000 ₽</span>
+          </li>
+        </ul>
+        <div class="sidebar__result">
+          <span>Итоговая сумма</span>
+          <span>27 800₽</span>
+        </div>
+        <div class="sidebar__promocode">
+          <input
+            type="text"
+            placeholder="Введите промокод"
+            class="sidebar__promocode-input"
+          />
+          <div class="sidebar__promocode-btn">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-arrow-next"></use>
+            </svg>
+          </div>
+        </div>
+        <a href="#" class="btn-s sidebar__btn">Перейти к оформлению</a>
+      </div>
+    </div>
+  </div>
+</section>
