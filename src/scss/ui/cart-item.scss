@@ -5,6 +5,9 @@
     padding-bottom: 20px;
     border-bottom: 1px solid var(--gray);
   }
+  @include tablet-min {
+    gap: 15px;
+  }
   &__gallery {
     height: auto;
     aspect-ratio: 1/1.6;
@@ -17,6 +20,9 @@
     @include hover {
       opacity: 0.8;
     }
+    @include tablet-min {
+      width: 130px;
+    }
 
     img {
       width: 100%;
@@ -28,6 +34,7 @@
   &__body {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
   &__title {
     display: block;
