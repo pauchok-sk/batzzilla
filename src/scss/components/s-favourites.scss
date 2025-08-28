@@ -1,0 +1,18 @@
+.s-favourites {
+  &__container-more {
+    [data-more-item] {
+      &:nth-child(-n+8) {
+        display: block;
+      }
+    }
+  }
+  &__more-btn {
+    margin: 50px auto 0px auto;
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}
