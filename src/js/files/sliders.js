@@ -166,4 +166,21 @@ export default function sliders() {
       },
     });
   }
+
+  const placesSliders = document.querySelectorAll(".s-places__slider");
+
+  if (placesSliders.length) {
+
+    placesSliders.forEach(slider => {
+      const swiper = new Swiper(slider, {
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          prevEl: slider.querySelector(".slider-btn._prev"),
+          nextEl: slider.querySelector(".slider-btn._next"),
+        },
+      });
+    })
+  }
 }

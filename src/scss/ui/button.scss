@@ -38,6 +38,16 @@
     padding: 15px 20px;
   }
 
+  &._outline {
+    background-color: white;
+    color: var(--black);
+    @include hover {
+      color: white;
+      background-color: var(--black);
+      border-color: var(--black);
+    }
+  }
+
   &._outline-white {
     color: white;
     background-color: transparent;
