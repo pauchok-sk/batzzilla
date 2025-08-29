@@ -42,6 +42,7 @@
     }
     .status {
       flex: 1;
+      white-space: nowrap;
 
       &._green {
         color: var(--green);

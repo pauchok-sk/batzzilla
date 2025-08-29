@@ -170,8 +170,7 @@ export default function sliders() {
   const placesSliders = document.querySelectorAll(".s-places__slider");
 
   if (placesSliders.length) {
-
-    placesSliders.forEach(slider => {
+    placesSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 800,
         slidesPerView: 1,
@@ -181,6 +180,21 @@ export default function sliders() {
           nextEl: slider.querySelector(".slider-btn._next"),
         },
       });
-    })
+    });
+  }
+
+  const productSlider = document.querySelector(".s-product__slider");
+
+  if (productSlider && window.matchMedia("(max-width: 991px)").matches) {
+
+    const swiper = new Swiper(productSlider, {
+      speed: 800,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      scrollbar: {
+        el: ".s-product__slider-scrollbar",
+        scrollable: true
+      },
+    });
   }
 }
