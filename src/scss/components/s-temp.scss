@@ -1,0 +1,121 @@
+.s-temp {
+  &__head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include laptop {
+      gap: 40px;
+    }
+    @include laptop-min {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+  &__title {
+    text-align: start;
+    margin: 0;
+  }
+  &__content {
+    color: var(--dove);
+    margin: 0;
+  }
+  &__grid {
+    display: flex;
+    gap: 20px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 6px;
+    flex: 1;
+    color: white;
+    min-height: 660px;
+    z-index: 1;
+
+    transition: flex .4s linear;
+
+    @include hover {
+      flex-basis: 35%;
+
+      .s-temp__item-content {
+        font-size: 18px;
+        margin-top: 20px;
+
+        @include laptop-middle {
+          font-size: 16px;
+        }
+      }
+    }
+    @include laptop {
+      padding: 25px;
+      min-height: 500px;
+    }
+    @include laptop-middle {
+      padding: 20px;
+    }
+    @include laptop-min {
+      flex: none !important;
+      width: 100%;
+      min-height: 450px;
+    }
+    @include tablet {
+      padding: 16px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      z-index: -1;
+    }
+  }
+  &__item-body {
+  }
+  &__item-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 145%;
+    margin: 0px 0px 20px 0px;
+    @include laptop {
+      font-size: 24px;
+    }
+    @include laptop-middle {
+      font-size: 20px;
+    }
+  }
+  &__item-num {
+    font-size: 36px;
+    line-height: 145%;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include laptop-middle {
+      font-size: 24px;
+    }
+  }
+  &__item-content {
+    font-size: 0;
+    margin: 0;
+    transition: font-size .5s ease, margin-top .3s ease;
+
+    @include laptop-min {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+}

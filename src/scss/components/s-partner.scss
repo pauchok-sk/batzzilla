@@ -1,0 +1,52 @@
+.s-partner {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__content {
+    margin: 0;
+  }
+  &__img {
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+  }
+  &__form-wrapper {
+  }
+  &__form-title {
+    margin: 0px 0px 35px 0px;
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tablet {
+      gap: 15px;
+    }
+  }
+  &__form-btn {
+  }
+}

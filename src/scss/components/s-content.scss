@@ -1,4 +1,13 @@
 .s-content {
+  &__head-content {
+    max-width: 1000px;
+    color: var(--dove);
+    text-align: center;
+    margin: 0px auto 50px auto;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
   &__slider-wrapper {
     display: flex;
     align-items: center;
